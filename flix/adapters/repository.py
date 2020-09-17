@@ -24,7 +24,7 @@ class AbstractRepository(ABC):
 
 class FlixRepository(AbstractRepository):
     def __init__(self):
-        self.data=MovieFileCSVReader("flix/data/Data1000Movies.csv")
+        self.data=MovieFileCSVReader("Data1000Movies.csv")
         self.data.read_csv_file()
 
     def find(self,keyword:str):
