@@ -55,10 +55,9 @@ class MovieFileCSVReader:
                     self.dataset_of_genre[genre].append(movie)
 
             # dataset of director
-            for item in temp['Director']:
-                director=Director(item)
-                if director not in self.dataset_of_director:
-                    director.is_director_of(movie)
-                    self.dataset_of_director.append(director)
-                else:
-                    self.dataset_of_director[self.dataset_of_director.index(director)].is_director_of(movie)
+            director = Director(temp['Director'])
+            if director not in self.dataset_of_director:
+                director.is_director_of(movie)
+                self.dataset_of_director.append(director)
+            else:
+                self.dataset_of_director[self.dataset_of_director.index(director)].is_director_of(movie)

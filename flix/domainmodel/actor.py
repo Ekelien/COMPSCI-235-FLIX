@@ -3,7 +3,7 @@
 
 class Actor:
     def __init__(self, fullname):
-
+        self.name=fullname
         self.colleagues = []
         # films the actor participate in
         self.participating = []
@@ -23,6 +23,9 @@ class Actor:
         if movie not in self.participating:
             self.participating.append(movie)
 
+    def is_an_actor_of(self,movie):
+        return movie in self.participating
+
     @property
     def name(self):
         return self.__name
@@ -39,14 +42,14 @@ class Actor:
 
     def __eq__(self, other):
         if type(other) is Actor:
-            return self.actor_full_name == other.actor_full_name
+            return self.name == other.name
         return False
 
     def __lt__(self, other):
-        return self.actor_full_name < other.actor_full_name
+        return self.name < other.actor_full_name
 
     def __hash__(self):
-        return hash(self.actor_full_name)
+        return hash(self.name)
 
     def add_actor_colleague(self, colleague):
         if type(colleague) is Actor:

@@ -78,16 +78,16 @@ class Movie:
 
 
     def __repr__(self):
-        return f"<Movie {self.title}, {self.time}>"
+        return f"<Movie {self.name}, {self.time}>"
 
     def __eq__(self, other):
-        return self.title +str(self.time) == other.title+ str(other.time)
+        return self.name +str(self.time) == other.name+ str(other.time)
 
     def __lt__(self, other):
-        return self.title +str(self.time) < other.title+ str(other.time)
+        return self.name +str(self.time) < other.name+ str(other.time)
 
     def __hash__(self):
-        return hash(self.title +str(self.time))
+        return hash(self.name +str(self.time))
 
     def add_actor(self, actor):
         if type(actor) is Actor and actor not in self.actors:
