@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/main.css">
-    <title>Title</title>
-</head>
-<body>
-    <div id="left_div">
-        <nav>
-            <img src="../img/logo.png">
-            <div id="home_button"><a>Home</a></div>
-            <div><a>Categories</a></div>
-            <div><a>Actors</a></div>
-            <div><a>Directors</a></div>
+{% extends 'main.html' %}
 
-        </nav>
+{% block content %}
+<h1>Recommended for You</h1>
+{% for movie in MovieList %}
+    <div>
+        <a>{{movie.name}}</a>
     </div>
-    <div id="right_div">
-        <div id="top_div">
-            <div id="search">
-                <input type="string" name="search"><div id="search_button"><a>Search</a></div>
-            </div>
-            <img id="user" src="../img/user.png" alt="user">
-        </div>
-        <div id="content_div">
-            {% block content %} {% endblock %}
-        </div>
-    </div>
+{% endfor %}
 
-
-</body>
-</html>
+<h1>Editor's Pick</h1>
+{% endblock %}

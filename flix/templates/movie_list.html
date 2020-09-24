@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h1>Search Result</h1>
+{% if MovieList!=none %}
+{% for movie in MovieList %}
+<div>
+    <a>{{movie.name}}</a>
+</div>
+{% endfor %}
+{% else %}
+<h3>No Matching Result</h3>
+{% endif %}
+{% endblock %}

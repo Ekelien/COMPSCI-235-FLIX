@@ -1,9 +1,8 @@
-
-
+from flix.domainmodel.abstract_flix import Flix
 
 class Actor:
     def __init__(self, fullname):
-        self.name=fullname
+        self.name = fullname
         self.colleagues = []
         # films the actor participate in
         self.participating = []
@@ -23,7 +22,7 @@ class Actor:
         if movie not in self.participating:
             self.participating.append(movie)
 
-    def is_an_actor_of(self,movie):
+    def is_an_actor_of(self, movie):
         return movie in self.participating
 
     @property
