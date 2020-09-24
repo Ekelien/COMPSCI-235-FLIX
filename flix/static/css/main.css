@@ -6,7 +6,7 @@ html,body{
 
 
 body #left_div{
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(255, 255, 255);
     height: 100%;
     width: 15%;
     overflow: auto;
@@ -49,13 +49,13 @@ body #right_div{
     width: 100%;
     overflow: auto;
     float:top;
-    background-color: palevioletred;
+    background-color: rgb(255, 255, 255);
     height: 60px;
     padding: 0px;
     border-bottom: 1px solid rgb(220, 220, 235);
 
 }
-#top_div div#search{
+#top_div #search{
     margin-top: 12px;
     margin-bottom: 12px;
     margin-left: 15%;
@@ -63,7 +63,7 @@ body #right_div{
     width:60%;
     float: left;
     overflow: auto;
-    background-color: rgb(255, 235, 235);
+    background-color: antiquewhite;
 }
 /*#top_div #search #search_input{*/
 /*    width: 74%;*/
