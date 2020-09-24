@@ -49,7 +49,7 @@ body #right_div{
     width: 100%;
     overflow: auto;
     float:top;
-    background-color: rgb(255, 255, 255);
+    background-color: palevioletred;
     height: 60px;
     padding: 0px;
     border-bottom: 1px solid rgb(220, 220, 235);
@@ -63,27 +63,20 @@ body #right_div{
     width:60%;
     float: left;
     overflow: auto;
-    background-color: antiquewhite;
+    background-color: rgb(255, 235, 235);
 }
-#top_div #search #keyword {
-    width: 74%;
-    height: 32px;
-    font-size: 18px;
-    border: 1px solid rgb(220, 220, 235);
-    float: left;
-    overflow: hidden;
-}
-#keyword:focus{
-    border:1px solid rgb(220, 220, 235);
-}
-#search #submit{
-    width: 23.5%;
-    height: 34px;
-    background-color: rgb(255, 255, 255);
-    float: right;
-    border: 1px solid rgb(220, 220, 235);
-    line-height: 34px;
-}
+/*#top_div #search #search_input{*/
+/*    width: 74%;*/
+/*    height: 100%;*/
+/*    border: 1px solid rgb(220, 220, 235);*/
+/*    float: left;*/
+/*    overflow: auto;*/
+/*}*/
+/*#top_div #search #search_button{*/
+/*    width: 23.5%;*/
+/*    height: 100%;*/
+/*    float: right;*/
+/*}*/
 /*}*/
 /*#top_div #search #search_button{*/
 /*    width: 23.5%;*/

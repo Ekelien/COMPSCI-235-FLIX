@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block style %}
-    {% endblock %}
     <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}"/>
     <title>Title</title>
 </head>
@@ -21,15 +19,16 @@
     <div id="right_div">
         <div id="top_div">
             <div id="search">
-                <form method="POST" action="/">
-                    {{ form.csrf_token }}
-                    <div id="search_input">
-                        {{ form.keyword }}
-                    </div>
-                    <div id="search_button">
-                        {{form.submit }}
-                    </div>
-                </form>
+<!--                <form method="POST" action="/">-->
+<!--                    {{ form.csrf_token }}-->
+<!--                    <div id="search_input">-->
+<!--                        {{ form.keyword }}-->
+<!--                    </div>-->
+<!--                    <div id="search_button">-->
+<!--                        {{form.submit }}-->
+<!--                    </div>-->
+<!--                </form>-->
+                eee
             </div>
             <img id="user" src="{{url_for('static',filename='img/user.png')}}" alt="user">
         </div>
