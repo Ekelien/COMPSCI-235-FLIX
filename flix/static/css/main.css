@@ -6,7 +6,7 @@ html,body{
 
 
 body #left_div{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 0);
     height: 100%;
     width: 15%;
     overflow: auto;
@@ -55,7 +55,7 @@ body #right_div{
     border-bottom: 1px solid rgb(220, 220, 235);
 
 }
-#top_div #search{
+#top_div div#search{
     margin-top: 12px;
     margin-bottom: 12px;
     margin-left: 15%;
