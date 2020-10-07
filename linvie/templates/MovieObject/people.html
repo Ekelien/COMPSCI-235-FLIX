@@ -1,0 +1,32 @@
+{% extends'main.html' %}
+{# a page of people: Actor or Director #}
+{# passing parameter: people #}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/block.css')}}"/>
+{% endblock %}
+
+{% block content %}
+<div id="people_img">
+    <img src="{{url_for('static',filename='img/rsc/'+people.url)}}">
+</div>
+<div id="people_info">
+    <h1>{{ people.name }}</h1>
+    {% for occu in people.type %}
+        <div id="occupation_tag">{{ occu }}</div>
+    {% endfor %}
+</div>
+<h1>Known for </h1>
+{% if people.movie_directed|length != 0 %}
+    <h2>as an Actor</h2>
+    {% for item in people.movie_directed %}
+        {% include 'General/block.html' %}
+    {% endfor %}
+{% endif %}
+{% if people.movie_participated|length != 0 %}
+    <h2>as an Director</h2>
+    {% for item in people.movie_participated %}
+        {% include 'General/block.html' %}
+    {% endfor %}
+{% endif %}
+{% endblock %}

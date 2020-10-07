@@ -1,0 +1,22 @@
+<div class="standard_block">
+    {% if item.type!="Movie" %}
+        {% for tag in item.type %}
+            <div id="tag">{{ tag }}</div>
+        {% endfor %}
+    {% else %}
+        <div id="tag">{{ item.type }}</div>
+    {% endif %}
+
+    <img src="{{url_for('static',filename='img/rsc/'+item.url)}}" alt="Image not available.">
+
+    <a href="{{'/'+item.href+'?keyword='+item.name}}"><h3>{{item.name}}</h3></a>
+
+    <div class="standard_block_bottom">
+    {% if item.type=="Movie" %}
+        <a href="{{'/people'+'?keyword='+item.director.name}}">{{item.director.name}}</a>
+        {% for gen in item.genre %}
+            <a href="{{'/genres'+'?keyword='+gen.name}}"><div id="occupation_tag">{{ gen.name }}</div></a>
+        {% endfor %}
+    {% endif %}
+    </div>
+</div>

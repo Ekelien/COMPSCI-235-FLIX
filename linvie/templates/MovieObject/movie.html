@@ -1,0 +1,31 @@
+{% extends'main.html' %}
+{# a page of people: Actor or Director #}
+{# passing parameter: people #}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/block.css')}}"/>
+{% endblock %}
+
+{% block content %}
+<div id="video_and_comment_div">
+    <h1>{{ movie.name }}</h1>
+    <div id="video">
+        <video controls>
+            <source src="{{ url_for('static',filename='video/'+movie.file) }}">
+            The movie is not available.
+        </video>
+    </div>
+    <div id="intro">
+
+    </div>
+    <div id="comment_bar">
+
+    </div>
+    <div id="comment">
+
+    </div>
+</div>
+<div id="recommend_video">
+
+</div>
+{% endblock %}

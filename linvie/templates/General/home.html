@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block style %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/block.css')}}"/>
+{% endblock %}
+
+{% block content %}
+<h1>Recommended for You</h1>
+{% for item in MovieList %}
+    {% include 'General/block.html' %}
+{% endfor %}
+
+{#<h1>Editor's Pick</h1>#}
+{% endblock %}

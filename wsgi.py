@@ -1,5 +1,5 @@
 """App entry point."""
-from flix import create_app
+from linvie import create_app
 
 app = create_app()
 
