@@ -6,16 +6,17 @@ from wtforms.validators import DataRequired, Length, ValidationError
 
 class PasswordValid(object):
     def __init__(self):
-        self.message="Your password must contain at least 8 characters, with at least one letter and one digit."
+        self.message = "Your password must contain at least 8 characters, with at least one letter and one digit."
 
     def __call__(self, form, field):
-        schema=PasswordValidator()
+        schema = PasswordValidator()
         schema \
-            .min(8)\
-            .has().letters()\
+            .min(8) \
+            .has().letters() \
             .has().digits()
         if not schema.validate(field.data):
-            raise  ValidationError(self.message)
+            raise ValidationError(self.message)
+
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', [

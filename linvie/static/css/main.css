@@ -1,11 +1,20 @@
-html,body{
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    color: grey;
 }
 
 #top_master_container {
-    margin:0;
+    margin: 0;
     padding: 0;
     border: 0;
     position: fixed;
@@ -14,42 +23,49 @@ html,body{
     height: 60px;
     background: ghostwhite;
 }
+
 #top_master_container img {
     max-height: 100%;
     max-width: 100%;
     height: 55px;
 }
+
 #top_master_container div {
 
 }
+
 #logo_image {
     float: left;
     overflow: auto;
     margin: 0 15px;
     height: 100%;
 }
+
 #search_panel {
     float: left;
     overflow: auto;
-    width:70%;
+    width: 70%;
     height: 40px;
     margin-left: 30px;
     margin-top: 15px;
 }
+
 #search_input {
-    width:63%;
+    width: 63%;
     height: 100%;
     float: left;
     overflow: auto;
     border: 1px solid rgb(220, 220, 235);
 }
+
 #search_submit {
-    width:18%;
+    width: 18%;
     height: 100%;
     float: left;
     overflow: auto;
     border: 1px solid rgb(220, 220, 235);
 }
+
 #advance_search {
     width: 18%;
     height: 100%;
@@ -58,22 +74,23 @@ html,body{
     line-height: 35px;
     font-size: 14px;
 }
-#search_panel input{
-    height: 100%;
+
+#search_panel input {
+    height: 30px;
     width: 100%;
 
 }
+
 #search_panel input:focus {
     border: none;
 }
-#search_panel input:hover {
-    background-color: aliceblue;
-}
+
 #user_panel {
     float: right;
     margin-right: 10px;
     height: 100%;
 }
+
 #left_guide_container {
     margin-top: 60px;
     height: 100%;
@@ -82,16 +99,19 @@ html,body{
     overflow: auto;
     position: fixed;
 }
+
 #left_guide_container .guide_button {
     width: 100%;
     line-height: 50px;
     transition: all 0.6s;
     text-align: center;
-    border-bottom: 1px solid rgb(220, 220, 235) ;
+    border-bottom: 1px solid rgb(220, 220, 235);
 }
+
 .guide_button:hover {
     background-color: rgb(255, 235, 235);
 }
+
 #guide_index_container {
     margin-top: 60px;
     margin-left: 15%;
@@ -101,18 +121,33 @@ html,body{
     overflow: visible;
     position: fixed;
 }
+
 #content_container {
     padding-top: 60px;
     padding-left: 17%;
 }
 
+#people_img {
+    width: 400px;
+    height: 400px;
+    background-color: aliceblue;
+    margin: 15px;
+    float: left;
+}
+
+
 .guide_index {
     position: relative;
-  display: inline-block;
-  width: 15px;
+    display: inline-block;
+    width: 15px;
     height: 15px;
+    line-height: 15px;
     border: 1px solid gainsboro;
+    text-align: center;
+    border-radius: 3px;
+    padding: 1px;
 }
+
 /* Tooltip text */
 .guide_index .tooltiptext {
     visibility: hidden;
@@ -131,5 +166,75 @@ html,body{
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .guide_index:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
+}
+
+.one_letter_block {
+    width: 100%;
+    border-top: 60px;
+    float: left;
+}
+
+.general_title_block {
+    width: 100%;
+    margin-top: 60px;
+    float: left;
+    margin-left: 15px;
+}
+
+.small_title {
+    width: 90%;
+    float: left;
+    margin-left: 10px;
+}
+
+#comment_container {
+    width: 720px;
+}
+
+input[type='text'],
+select {
+    width: 99%;
+    height: 99%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+}
+
+input[type='password'],
+select {
+    width: 99%;
+    height: 99%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: none;
+}
+
+input[type='submit'] {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+input[type='submit']:hover {
+    background-color: rgb(255, 235, 235);
+    color: black;
+}
+
+.comment_line {
+    width: 100%;
+    text-align: left;
+}
+
+.comment_info_line {
+    width: 100%;
+    text-align: right;
+}
+
+#comment, #comment_container, #intro {
+    width: 710px;
+    overflow: auto;
 }

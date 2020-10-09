@@ -1,32 +1,34 @@
-{% extends'main.html' %}
+{% extends'Main.html' %}
 {# a page of people: Actor or Director #}
 {# passing parameter: people #}
 
 {% block style %}
-<link rel="stylesheet" href="{{url_for('static',filename='css/block.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/block.css') }}"/>
 {% endblock %}
 
 {% block content %}
-<div id="people_img">
-    <img src="{{url_for('static',filename='img/rsc/'+people.url)}}">
-</div>
-<div id="people_info">
-    <h1>{{ people.name }}</h1>
-    {% for occu in people.type %}
-        <div id="occupation_tag">{{ occu }}</div>
-    {% endfor %}
-</div>
-<h1>Known for </h1>
-{% if people.movie_directed|length != 0 %}
-    <h2>as an Actor</h2>
-    {% for item in people.movie_directed %}
-        {% include 'General/block.html' %}
-    {% endfor %}
-{% endif %}
-{% if people.movie_participated|length != 0 %}
-    <h2>as an Director</h2>
-    {% for item in people.movie_participated %}
-        {% include 'General/block.html' %}
-    {% endfor %}
-{% endif %}
+    <div id="people_img">
+        <img src="{{ url_for('static',filename='img/rsc/'+people.url) }}" alt="image not available">
+    </div>
+    <div id="people_info">
+        <h1 style="padding-top: 15px;">{{ people.name }}</h1>
+        {% for occu in people.type %}
+            <a>
+                <div class="tag">{{ occu }}</div>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="one_letter_block"><h1>Known for </h1></div>
+    {% if people.movie_directed|length != 0 %}
+        <div class="one_letter_block"><h2>Directed</h2></div>
+        {% for item in people.movie_directed %}
+            {% include 'Block.html' %}
+        {% endfor %}
+    {% endif %}
+    {% if people.movie_participated|length != 0 %}
+        <div class="one_letter_block"><h2>Participated</h2></div>
+        {% for item in people.movie_participated %}
+            {% include 'Block.html' %}
+        {% endfor %}
+    {% endif %}
 {% endblock %}
