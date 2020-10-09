@@ -1,3 +1,3 @@
 id,username,password,favorite
 0,ekelien,pbkdf2:sha256:150000$JgNuBVC5$4566450fcfe0db298d94730bd7303391187f2638148cda6c47006b93aed4e637,"1,0"
-1,super,pbkdf2:sha256:150000$Z9hVJaXY$8c110ffb94a661338ee54c50460c5bea2459e7cfd76baf763c541405a78d9bfa,
+1,super,pbkdf2:sha256:150000$Z9hVJaXY$8c110ffb94a661338ee54c50460c5bea2459e7cfd76baf763c541405a78d9bfa,"0,1,3"
